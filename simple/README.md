@@ -16,10 +16,6 @@ Render also has [Oauth2 Proxy tutorial](https://render.com/blog/password-protect
 
 ### Setup
 
-1. Create another OAuth application and save the `Client ID` and `Client Secret` as you did in the [minimal example](../local/README.md).  You can fill it out like this:
-
-![](app_setup.png)
-
 2. [fork this repo](https://github.com/hamelsmu/oauth-render-quarto/tree/main).
 
 3. **Optional:** Change the content of your site by editing one of the `.qmd` files, then run `quarto render` to re-generate the content into the `_site/` folder.  **Make sure you check-in any changes, including the `_site` folder into your repo.**
@@ -28,7 +24,13 @@ Render also has [Oauth2 Proxy tutorial](https://render.com/blog/password-protect
 
 ![](render_blueprint.png)
 
-5. Set up your custom domain by navigating to [your dashboard](https://dashboard.render.com/) and clicking on this project, which is named `oauth2-proxy-render` (unless you changed it). On the left-hand side click `Settings`.  Under `Settings`, scroll down to the section named `Custom Domains`.  Add your domain there and follow the instructions.  Render will take care of provisioning an SSL certificate to enable `https` on your domain for you.
+1. Create another OAuth application and save the `Client ID` and `Client Secret` as you did in the [minimal example](../local/README.md).  You can fill it out like this:
+
+![](app_setup.png)
+
+Homepage URL can also be a subdomain of a custom domain you own (e.g. `private.hamel.rsvp`). If using Netlify, just type in whatever you want the subdomain to be for now, and then add a `CNAME` DNS record once you've deployed your site on Render. 
+
+5. Set up your custom domain on Render by navigating to [your dashboard](https://dashboard.render.com/) and clicking on this project, which is named `oauth2-proxy-render` (unless you changed it). On the left-hand side click `Settings`.  Under `Settings`, scroll down to the section named `Custom Domains`.  Add your domain there and follow the instructions.  Render will take care of provisioning an SSL certificate to enable `https` on your domain for you.
 
 ### Testing Your Site
 
